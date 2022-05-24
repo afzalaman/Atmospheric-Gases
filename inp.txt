@@ -1,0 +1,6 @@
+4
+Z 3
+X 0.8
+C 2
+X 5 
+OOOOSSTSSOO
