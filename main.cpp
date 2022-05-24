@@ -81,47 +81,6 @@ void cleanup(vector<Gases*> &gases)
     }
 }
 
-/*void simulate(vector<Gases*> &gases, vector<Conditions*> &agent, vector< vector <Gases*> > &answer)
-{
-    try{
-        answer.clear();
-        int initial=gases.size();
-        while(gases.size() >=3 && gases.size() < (3*initial) && agent.size() > 0 )
-        {
-        for( unsigned int i=0; i < agent.size(); i++ )
-        {
-            for( unsigned int j=0; j < gases.size(); j++ )
-            {
-                Gases* temp = agent[i]->transform(gases[j]);
-                if (temp->name() == gases[j]->name())
-                {
-                    continue;
-                }
-                bool l = false;
-                for (unsigned int k = j+1;!l && k<gases.size();k++)
-                {
-                    if((gases[k]->name() == temp->name()))
-                    {
-                        l = true;
-                        gases[k]->addThickness(temp->getThickess());
-                    }
-                }
-                if (!l)
-                {
-                    gases.push_back(temp);
-                }
-                cleanup(gases);  
-            }
-        }
-        answer.push_back(gases);
-    }
-    catch(exception e)
-    {
-        cout << e.what() << endl;
-    }
-    // return answer;
-}*/
-
 //Task:       The Simulation
 //Input:      vector<Gases*> &gases  - vector of pointers of the gases
 //            vector<Conditions*> &agent - vector of the Atmospheric Variables(Conditions)
@@ -163,11 +122,13 @@ void simulate(vector<Gases*> &gases, vector<Conditions*> &agent, vector< vector 
             }
 
 //For printing each layer after the effect of each Variables (Not a series of Variables like a simulation)
-                    // for( unsigned int z=0; z < gases.size(); z++ )
-                    // {
-                    //         cout << gases[z]->name() << "       " << gases[z]->getThickess() << "km" << endl;
-                    // }  
-                    // cout << "\n$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n\n";  
+                    /*
+                    for( unsigned int z=0; z < gases.size(); z++ )
+                    {
+                            cout << gases[z]->name() << "       " << gases[z]->getThickess() << "km" << endl;
+                    }  
+                    cout << "\n$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n\n";  
+                    */
 
         }
         answer.resize(counter+1);
@@ -224,7 +185,6 @@ int main()
 
     cout<<"\n#######################################\n\n\n";
 
-    //vector< vector<Gases*> >ans;
     vector< vector <pair <string,double> > > ans;
 
     simulate(gases,agent,ans);
