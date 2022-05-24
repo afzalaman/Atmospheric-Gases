@@ -1,5 +1,6 @@
 # Task Description
 (This task was given as an assingment in BSc Computer Science - OOP course at Eötvös Loránd University)
+(The given task need to be solved using design patterns)
 
 Layers of gases are given, with certain type (ozone, oxygen, carbon dioxide) and thickness, affected by atmospheric variables (thunderstorm, sunshine, other effects). When a part of one layer changes into another layer due to an athmospheric variable, the newly transformed layer ascends and engrosses the first identical type of layer of gases over it. In case there is no identical layer above, it creates a new layer on the top of the atmosphere.
 In the following we declare, how the different types of layers react to the different variables by changing their type and thickness.
